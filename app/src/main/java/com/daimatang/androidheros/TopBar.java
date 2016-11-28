@@ -10,10 +10,6 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-/**
- * Created by qq418 on 2016/11/25.
- */
-
 public class TopBar extends RelativeLayout {
 
     // 包含topbar上的元素：左按钮、右按钮、标题
@@ -39,12 +35,12 @@ public class TopBar extends RelativeLayout {
     // 映射传入的接口对象
     private topbarClickListener mListener;
 
-    public TopBar(Context context) {
-        super(context);
+    public TopBar(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
     }
 
-    public TopBar(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+    public TopBar(Context context) {
+        super(context);
     }
 
     public TopBar(Context context, AttributeSet attrs) {
@@ -135,7 +131,6 @@ public class TopBar extends RelativeLayout {
             }
         });
     }
-
 
     // 暴露一个方法给调用者来注册接口回调
     // 通过接口来获得回调者对接口方法的实现
